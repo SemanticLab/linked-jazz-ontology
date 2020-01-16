@@ -1,0 +1,208 @@
+@prefix : <http://linkedjazz.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@base <http://linkedjazz.org/ontology/> .
+
+
+<http://linkedjazz.org/ontology/> rdf:type owl:Ontology ;
+                                                                
+
+
+    dc:creator "Hilary Thorsen"^^xsd:string ;
+    dc:creator "Cristina Pattuelli"^^xsd:string ;
+    dc:creator "Alexandra Provo"^^xsd:string ;
+    dc:date "2015-01-01"^^xsd:dateTimeStamp;
+
+    rdfs:comment "The ontology for the Linked Jazz project's linked open dataset. An extension of foaf and the Relationship Vocabulary, the Linked Jazz Ontology more granularly describes relationships between jazz musicians and groups."^^xsd:string ,
+                 "This ontology was partially generated from an ontology revision in WebProtege http://linkedjazz.org"^^xsd:string ;
+
+    owl:imports <http://purl.org/ontology/mo/> ;
+    owl:imports <http://purl.org/vocab/relationship/> ;
+    owl:imports <http://xmlns.com/foaf/0.1/> .
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+
+###  http://xmlns.com/foaf/0.1/Person
+
+<http://xmlns.com/foaf/0.1/Person> rdf:type :Class ;
+                                   
+                                   rdfs:label "foaf:Person" ;
+                                   
+                                   rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+
+
+###  http://xmlns.com/foaf/0.1/thumbnail
+
+<http://xmlns.com/foaf/0.1/thumbnail> rdf:type :ObjectProperty ;
+                                      
+                                      rdfs:label "foaf:thumbnail" ;
+                                      
+                                      rdfs:range foaf:thumbnail ;
+                                      
+                                      rdfs:domain foaf:thumbnail .
+
+
+
+
+###  http://linkedjazz.org/ontology/bandLeaderOf
+
+:bandLeaderOf rdf:type owl:ObjectProperty ;
+                                              
+                                            rdfs:label "lj:bandLeaderOf" ;
+                                              
+                                            rdfs:subPropertyOf mo:collaborated_with ;
+                                              
+                                            rdfs:domain foaf:Agent ;
+                                              
+                                            rdfs:range foaf:Agent ;
+
+                                            rdfs:comment "".
+
+
+
+###  http://linkedjazz.org/ontology/bandMemberOf
+
+:bandMemberOf rdf:type owl:ObjectProperty ;
+                                              
+                                            rdfs:label "lj:bandMemberOf" ;
+                                              
+                                            rdfs:subPropertyOf mo:collaborated_with ;
+                                              
+                                            rdfs:domain foaf:Agent ;
+                                              
+                                            rdfs:range foaf:Agent ;
+
+                                            rdfs:comment "".
+
+
+
+###  http://linkedjazz.org/ontology/inBandWith
+
+:inBandWith> rdf:type owl:ObjectProperty ;
+                                            
+                                            rdfs:label "lj:inBandWith" ;
+                                            
+                                            rdfs:subPropertyOf mo:collaborated_with ;
+                                              
+                                            rdfs:domain foaf:Agent ;
+                                              
+                                            rdfs:range foaf:Agent ;
+
+                                            rdfs:comment "".
+
+
+
+###  http://linkedjazz.org/ontology/playedTogether
+
+:playedTogether rdf:type owl:ObjectProperty ;
+                                                
+                                            rdfs:label "lj:playedTogether" ;
+                                                
+                                            rdfs:subPropertyOf mo:collaborated_with ;
+                                              
+                                            rdfs:domain foaf:Agent ;
+                                              
+                                            rdfs:range foaf:Agent ;
+
+                                            rdfs:comment "".
+
+
+
+###  http://linkedjazz.org/ontology/touredWith
+
+:touredWith rdf:type owl:ObjectProperty ;
+                                            
+                                            rdfs:label "lj:touredWith" ;
+                                            
+                                            rdfs:subPropertyOf mo:collaborated_with ;
+                                              
+                                            rdfs:domain foaf:Agent ;
+                                              
+                                            rdfs:range foaf:Agent ;
+
+                                            rdfs:comment "".
+
+###  http://linkedjazz.org/ontology/knowsOf
+
+:knowsOf rdf:type owl:ObjectProperty ;
+
+                                            rdfs:label "lj:knowsOf" ;
+
+                                            rdfs:domain foaf:Person ;
+
+                                            rdfs:range foaf:Agent ;
+                                            
+                                            rdfs:comment "Used to relate a solo music artist to another solo artist or to a music group and to state that one knows of the existence of another. This property is not symmetric" .
+
+    
+
+
+###  http://linkedjazz.org/ontology/influencedBy
+
+:influencedBy rdf:type owl:ObjectProperty ;
+                                            rdfs:label "lj:influencedBy" ;
+
+                                            rdfs:domain foaf:Person ;
+                                            
+                                            rdfs:range foaf:Agent .
+                                            
+                                            rdfs:comment "Used to relate a solo music artist to another solo artist or to a music group and to state that one was influenced by the other. This property is not symmetric" .
+
+
+#################################################################
+#
+#    Datatype Properties
+#
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+
+<http://xmlns.com/foaf/0.1/name> rdf:type :DatatypeProperty ;
+                                      
+                                      rdfs:label "foaf:name" ;
+                                      
+                                      rdfs:range rdfs:Literal ;
+                                      
+                                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://www.w3.org/TR/rdf-schema#rdfs:comment
+
+<http://www.w3.org/TR/rdf-schema#rdfs:comment> rdf:type :DatatypeProperty ;
+                                      
+                                      rdfs:label "rdfs:comment" ;
+                                      
+                                      rdfs:range rdfs:Literal ;
+                                      
+                                      rdfs:domain rdfs:Resource .
+
+

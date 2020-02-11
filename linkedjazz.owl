@@ -81,7 +81,7 @@
                                               
                                             rdfs:subPropertyOf mo:collaborated_with ;
                                               
-                                            rdfs:domain foaf:Agent ;
+                                            rdfs:domain foaf:Person ;
                                               
                                             rdfs:range foaf:Agent ;
 
@@ -97,7 +97,7 @@
                                               
                                             rdfs:subPropertyOf mo:collaborated_with ;
                                               
-                                            rdfs:domain foaf:Agent ;
+                                            rdfs:domain foaf:Person ;
                                               
                                             rdfs:range foaf:Agent ;
 
@@ -113,9 +113,9 @@
                                             
                                             rdfs:subPropertyOf mo:collaborated_with ;
                                               
-                                            rdfs:domain foaf:Agent ;
+                                            rdfs:domain foaf:Person ;
                                               
-                                            rdfs:range foaf:Agent ;
+                                            rdfs:range foaf:Person ;
 
                                             rdfs:comment "".
 
@@ -133,7 +133,7 @@
                                               
                                             rdfs:range foaf:Agent ;
 
-                                            rdfs:comment "".
+                                            rdfs:comment "Used to relate a solo music artist or music group to another solo artist or music group and to state that one played music with the other. This property is symmetric" .
 
 
 
@@ -149,7 +149,9 @@
                                               
                                             rdfs:range foaf:Agent ;
 
-                                            rdfs:comment "".
+                                            rdfs:comment "Used to relate a solo music artist or music group to another solo artist or music group and to state that one toured with the other. This property is symmetric" .
+
+
 
 ###  http://linkedjazz.org/ontology/knowsOf
 

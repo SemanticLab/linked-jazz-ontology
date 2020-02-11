@@ -12,8 +12,7 @@
 @base <http://linkedjazz.org/ontology/> .
 
 
-<http://linkedjazz.org/ontology/> rdf:type owl:Ontology ;
-                                                                
+<http://linkedjazz.org/ontology/> rdf:type owl:Ontology ;                                            
 
 
     dc:creator "Hilary Thorsen"^^xsd:string ;
@@ -48,6 +47,11 @@
                                    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
 
 
+###  http://xmlns.com/foaf/0.1/Agent
+
+<http://xmlns.com/foaf/0.1/Agent> rdf:type :Class ;
+
+                                   rdfs:label "foaf:Agent" .
 
 
 
@@ -56,7 +60,6 @@
 #    Object Properties
 #
 #################################################################
-
 
 
 
@@ -69,7 +72,6 @@
                                       rdfs:range foaf:thumbnail ;
                                       
                                       rdfs:domain foaf:thumbnail .
-
 
 
 
@@ -167,7 +169,6 @@
 
     
 
-
 ###  http://linkedjazz.org/ontology/influencedBy
 
 :influencedBy rdf:type owl:ObjectProperty ;
@@ -180,11 +181,14 @@
                                             rdfs:comment "Used to relate a solo music artist to another solo artist or to a music group and to state that one was influenced by the other. This property is not symmetric" .
 
 
+
 #################################################################
 #
 #    Datatype Properties
 #
 #################################################################
+
+
 
 ###  http://xmlns.com/foaf/0.1/name
 
@@ -195,6 +199,7 @@
                                       rdfs:range rdfs:Literal ;
                                       
                                       rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
 
 
 ###  http://www.w3.org/TR/rdf-schema#rdfs:comment

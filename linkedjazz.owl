@@ -85,15 +85,15 @@
                                               
                                             rdfs:range foaf:Agent ;
 
-                                            rdfs:comment "".
+                                            rdfs:comment "Used to relate a solo music artist to either another solo music artist or to a music group, and to state that the solo music artist was the band leader of another music artist or was the band leader of a music group. This property is not symmetric" .
 
 
 
-###  http://linkedjazz.org/ontology/bandMemberOf
+###  http://linkedjazz.org/ontology/bandMember
 
 :bandMemberOf rdf:type owl:ObjectProperty ;
                                               
-                                            rdfs:label "lj:bandMemberOf" ;
+                                            rdfs:label "lj:bandMember" ;
                                               
                                             rdfs:subPropertyOf mo:collaborated_with ;
                                               
@@ -101,7 +101,7 @@
                                               
                                             rdfs:range foaf:Agent ;
 
-                                            rdfs:comment "".
+                                            rdfs:comment "Used to relate a solo music artist to either another solo music artist or to a music group, and to state that the solo music artist was a band member for another music artist or that the solo music artist was a band member of a music group. This property is not symmetric" .
 
 
 
@@ -117,7 +117,7 @@
                                               
                                             rdfs:range foaf:Person ;
 
-                                            rdfs:comment "".
+                                            rdfs:comment "Used to relate a solo music artist to another solo music artist and to state that one was in the band with the other. This property is symmetric" .
 
 
 

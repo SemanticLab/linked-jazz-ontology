@@ -109,7 +109,7 @@
 
 ###  http://linkedjazz.org/ontology/inBandWith
 
-:inBandWith> rdf:type owl:ObjectProperty ;
+:inBandWith rdf:type owl:ObjectProperty ;
                                             
                                             rdfs:label "inBandWith"@en ;
                                             
